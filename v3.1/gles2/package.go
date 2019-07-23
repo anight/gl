@@ -19,7 +19,7 @@ package gles2
 // #cgo darwin        LDFLAGS: -framework OpenGL
 // #cgo windows       LDFLAGS: -lopengl32
 // #cgo !egl,linux !egl,freebsd pkg-config: gl
-// #cgo egl,linux egl,freebsd   pkg-config: egl
+// #cgo egl,linux egl,freebsd   LDFLAGS: -L/usr/lib/vivante -lEGL
 // #if defined(_WIN32) && !defined(APIENTRY) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__)
 // #ifndef WIN32_LEAN_AND_MEAN
 // #define WIN32_LEAN_AND_MEAN 1

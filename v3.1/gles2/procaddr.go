@@ -23,7 +23,7 @@ package gles2
 #cgo linux freebsd              CFLAGS: -DTAG_POSIX
 #cgo !egl,linux !egl,freebsd    pkg-config: gl
 #cgo egl,linux egl,freebsd  CFLAGS: -DTAG_EGL
-#cgo egl,linux egl,freebsd  pkg-config: egl
+#cgo egl,linux egl,freebsd  LDFLAGS: -L/usr/lib/vivante -lEGL
 // Check the EGL tag first as it takes priority over the platform's default
 // configuration of WGL/GLX/CGL.
 #if defined(TAG_EGL)
